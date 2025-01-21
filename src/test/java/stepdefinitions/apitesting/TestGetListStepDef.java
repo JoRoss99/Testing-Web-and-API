@@ -8,12 +8,10 @@ import io.cucumber.java.en.When;
 import testlogic.apitesting.APITestProcessGeneric;
 import testlogic.apitesting.APIUserTest;
 
-public class PrepareUrlForStepDef {
-    APIUserTest apiUser;
-    UserProfile dataTestCreateUser, dataTestUpdateUser;
-    String currentUserID;
+public class TestGetListStepDef {
+    static APIUserTest apiUser;
 
-    public PrepareUrlForStepDef() {apiUser = new APIUserTest();}
+    public TestGetListStepDef() {apiUser = new APIUserTest();}
 
 
     @Given("prepare url for {string}")
@@ -45,4 +43,6 @@ public class PrepareUrlForStepDef {
         // check response data using Json Schema format
         APITestProcessGeneric.validationResponseData(apiUser.getRes(), dataType);
     }
+
+
 }

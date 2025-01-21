@@ -3,12 +3,9 @@ package stepdefinitions.apitesting;
 import io.cucumber.java.en.Then;
 import testlogic.apitesting.APIUserTest;
 
-public class DataProfileNotFound {
+public class ProfileNotFoundStepDef {
     APIUserTest apiUser;
-    public DataProfileNotFound() {apiUser =  TestGetListStepDef.apiUser;}
+    public ProfileNotFoundStepDef() {apiUser =  TestGetListStepDef.apiUser;}
 
-    @Then("validation response body with message {string}")
-    public void validationResponseBodyWithMessage(String message) {
-        apiUser.checkResponseBodyGetProfileUserFailed(message);
-    }
+
 }

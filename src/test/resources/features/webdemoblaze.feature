@@ -37,7 +37,7 @@ Feature: Test Automation Web Demo Blaze Feature
   Scenario: Test web sign up with empty username and password
     Given user go to Product Store page "https://www.demoblaze.com/"
     And user click menu Sign up
-    When user input sign up username "joross123"
+    When user input sign up username ""
     And user click sign up button
     Then Sign up successfully and display message "Please fill out Username and Password."
 

@@ -8,11 +8,11 @@ import testlogic.apitesting.APIUserTest;
 
 import java.text.ParseException;
 
-public class CreateNewUser {
+public class CreateNewUserStepDef {
     APIUserTest apiUser;
     UserProfile dataTestCreateUser, dataTestUpdateUser;
     String currentUserID;
-    public CreateNewUser() {apiUser =  TestGetListStepDef.apiUser;}
+    public CreateNewUserStepDef() {apiUser =  TestGetListStepDef.apiUser;}
 
     @When("hit api post create new user")
     public void hitApiPostCreateNewUser() {
