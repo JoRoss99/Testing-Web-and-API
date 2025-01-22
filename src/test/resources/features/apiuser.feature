@@ -41,19 +41,18 @@ Feature: Test Automation Rest API User Management
     Then validation response body update user
     Then validation response json with JSONSchema "update_profile_user_normal.json"
 
-#  @api
-#  Scenario: Test delete user normal
-#    Given prepare url for "CREATE_NEW_USER"
-#    When hit api post create new user
-#    Then validation status code api user is equals 200
-#    Given prepare url for "DELETE_USER"
-#    And hit api post create new user for manipulation data
-#    When hit api delete user
-#    Then validation status code api user is equals 200
-##    Then validation response body delete user
-##    Then validation response json with JSONSchema "delete_user_normal.json"
-##    Then hit api get profile user after deleted
-##    Then validation response body with message "RESOURCE_NOT_FOUND"
+  @api
+  Scenario: Test delete user normal
+    Given prepare url for "CREATE_NEW_USER"
+    And hit api post create new user for manipulation data
+    Then validation status code api user is equals 200
+    Given prepare url for "DELETE_USER"
+    When hit api delete user
+    Then validation status code api user is equals 200
+    Then validation response body delete user
+    Then validation response json with JSONSchema "delete_user_normal.json"
+    Then hit api get profile user after deleted
+    Then validation response body with message "RESOURCE_NOT_FOUND"
 
   @api
   Scenario: Test delete user with user id not found

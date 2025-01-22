@@ -13,7 +13,7 @@ import java.text.ParseException;
 public class UpdateUserStepDef {
     APIUserTest apiUser;
     UserProfile dataTestCreateUser, dataTestUpdateUser;
-    String currentUserID;
+    static String currentUserID;
     public UpdateUserStepDef() {apiUser =  TestGetListStepDef.apiUser;}
 
     @And("hit api post create new user for manipulation data")
