@@ -43,6 +43,4 @@ public class TestGetListStepDef {
         // check response data using Json Schema format
         APITestProcessGeneric.validationResponseData(apiUser.getRes(), dataType);
     }
-
-
 }

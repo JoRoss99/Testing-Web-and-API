@@ -9,7 +9,10 @@ public class DeleteUserStepDef {
     APIUserTest apiUser;
     UserProfile dataTestCreateUser, dataTestUpdateUser;
     String currentUserID;
-    public DeleteUserStepDef() {apiUser =  TestGetListStepDef.apiUser;}
+    public DeleteUserStepDef() {
+        apiUser =  TestGetListStepDef.apiUser;
+        currentUserID = UpdateUserStepDef.currentUserID;
+    }
 
 
     @When("hit api delete user")
